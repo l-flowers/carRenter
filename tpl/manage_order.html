@@ -1,0 +1,294 @@
+
+<div class="container manage-page">
+    <h2>租车系统管理中心</h2>
+    <h4>当前管理员：{{adminName}}</h4>
+    <ul class="nav nav-tabs" id="nav">
+        <li class="active"><a>订单管理中心</a></li>
+        <li><a>用户管理中心</a></li>
+        <li><a>车辆管理中心</a></li>
+        <li><a>添加管理员</a></li>
+    </ul>
+    <div class="table-responsive" id="manage1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>订单编号</th>
+                    <th>订单价钱</th>
+                    <th>订单状态</th>
+                    <th>订单操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>890124455</td>
+                    <td>320.00</td>
+                    <td>待取车</td>
+                    <td>
+                        <select>
+                            <option value="1">已接单</option>
+                            <option value="2">拒绝单</option>
+                            <option value="3">交易中</option>
+                            <option value="4">交易结束</option>
+                        </select>
+                        <button type="button" class="btn btn-xs btn-success" data-oid={{oid}}>确认</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>890124455</td>
+                    <td>320.00</td>
+                    <td>待取车</td>
+                    <td>
+                        <select>
+                            <option value="1">已接单</option>
+                            <option value="2">拒绝单</option>
+                            <option value="3">交易中</option>
+                            <option value="4">交易结束</option>
+                        </select>
+                        <button type="button" class="btn btn-xs btn-success" data-oid="2">确认</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>890124455</td>
+                    <td>320.00</td>
+                    <td>待取车</td>
+                    <td>
+                        <select>
+                            <option value="1">已接单</option>
+                            <option value="2">拒绝单</option>
+                            <option value="3">交易中</option>
+                            <option value="4">交易结束</option>
+                        </select>
+                        <button type="button" class="btn btn-xs btn-success">确认</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>890124455</td>
+                    <td>320.00</td>
+                    <td>待取车</td>
+                    <td>
+                        <select>
+                            <option value="1">已接单</option>
+                            <option value="2">拒绝单</option>
+                            <option value="3">交易中</option>
+                            <option value="4">交易结束</option>
+                        </select>
+                        <button type="button" class="btn btn-xs btn-success">确认</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive" style="display:none"  id="manage2">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>用户编号</th>
+                <th>用户姓名</th>
+                <th>用户操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>890124455</td>
+                <td>Lucy</td>
+                <td>
+                    <select>
+                        <option value="1">注销</option>
+                        <option value="2">封号</option>
+                        <option value="3">解封</option>
+                    </select>
+                    <button type="button" class="btn btn-xs btn-success">确认</button>
+                </td>
+            </tr>
+            <tr>
+                <td>890124455</td>
+                <td>Cindy</td>
+                <td>
+                    <select>
+                        <option value="1">注销</option>
+                        <option value="2">封号</option>
+                        <option value="3">解封</option>
+                    </select>
+                    <button type="button" class="btn btn-xs btn-success">确认</button>
+                </td>
+            </tr>
+            <tr>
+                <td>890124455</td>
+                <td>Peter</td>
+                <td>
+                    <select>
+                        <option value="1">注销</option>
+                        <option value="2">封号</option>
+                        <option value="3">解封</option>
+                    </select>
+                    <button type="button" class="btn btn-xs btn-success">确认</button>
+                </td>
+            </tr>
+            <tr>
+                <td>890124455</td>
+                <td>John</td>
+                <td>
+                    <select>
+                        <option value="1">注销</option>
+                        <option value="2">封号</option>
+                        <option value="3">解封</option>
+                    </select>
+                    <button type="button" class="btn btn-xs btn-success">确认</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="manage3" style="display:none">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>品牌：</label>
+                    <input type="text" class="form-control" ng-model="car.brand">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>型号：</label>
+                    <input type="text" class="form-control" ng-model="car.name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>单价：</label>
+                    <input type="text" class="form-control" ng-model="car.price">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>数量：</label>
+                    <input type="text" class="form-control" ng-model="car.count">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>图片：</label>
+                    <input type="text" class="form-control" ng-model="car.img">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>发 动 机 ：</label>
+                    <select  ng-model="car.engine">
+                        <option value="0">2.0T</option>
+                        <option value="1">1.4T</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3  form-horizontal">
+                <div class="form-group">
+                    <label>变速箱：</label>
+                    <select ng-model="car.gearbox">
+                        <option value="0">手动变速器</option>
+                        <option value="1">自动变速器</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>车身结构：</label>
+                    <select ng-model="car.zone">
+                        <option value="0">4门5座</option>
+                        <option value="1">5门5座</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3  form-horizontal">
+                <div class="form-group">
+                    <label>座位数：</label>
+                    <select ng-model="car.seat">
+                        <option value="0">5</option>
+                        <option value="1">7</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>能源：</label>
+                    <select ng-model="car.energy">
+                        <option value="0">汽油</option>
+                        <option value="1">电能</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3  form-horizontal">
+                <div class="form-group">
+                    <label>驱动方式：</label>
+                    <select ng-model="car.driveMode">
+                        <option value="0">二驱</option>
+                        <option value="1">四驱</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-lg btn-success center-block" ng-click="addCar()">加入该车</button>
+    </div>
+    <div id="manage4" style="display:none">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>用户名：</label>
+                    <input type="text" class="form-control" ng-model="admin.name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>登陆密码：</label>
+                    <input type="text"  class="form-control" ng-model="admin.pwd">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 form-horizontal">
+                <div class="form-group">
+                    <label>邮箱：</label>
+                    <input type="text"  class="form-control" ng-model="admin.mail">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-lg btn-success center-block" ng-click="addAdmin()">添加管理员</button>
+    </div>
+
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+    javascript:(function () {
+        var s = document.createElement("script");
+        s.onload = function () {
+            bootlint.showLintReportForCurrentDocument([]);
+        };
+        s.src = "../js/bootlint.js";
+        document.body.appendChild(s)
+    })();
+
+    $("#nav li").click(function(){
+        var i = $(this).index()+1;
+        var el = "manage"+i;
+        $("[id^='manage']").hide();
+        $("#manage"+i).show();
+        $("#nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>

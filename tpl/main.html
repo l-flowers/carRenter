@@ -1,0 +1,29 @@
+<div ng-include="'tpl/header.html'"></div>
+<div class="carousel slide" data-ride="carousel" id="carousel" style="height:600px;">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/banner_01.jpg" alt=""/>
+        </div>
+        <div class="item">
+            <img src="img/banner_02.jpg" alt=""/>
+        </div>
+        <div class="item">
+            <img src="img/banner_03.jpg" alt=""/>
+        </div>
+        <div class="item">
+            <img src="img/banner_04.jpg" alt=""/>
+        </div>
+    </div>
+    <div id="carousel-intro">
+        <h1>老司机租车</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut autem consequatur, culpa dicta error, fuga hic iure laboriosam modi nemo nesciunt odit omnis qui quos, saepe voluptatem voluptates!</p>
+        <a  class="btn btn-primary btn-md" id="renting-btn" ng-click="jump('/regin')">加入老司机</a>
+    </div>
+</div>
+<div ng-include="'tpl/footer.html'"></div>

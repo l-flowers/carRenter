@@ -1,0 +1,92 @@
+<div ng-include="'tpl/header.html'"></div>
+<div class="container-fluid product-page">
+    <div style="overflow: hidden">
+        <ul style="position: fixed;width:200px" class="list-unstyled">
+            <li>dakjsa</li>
+            <li>1asdfwasdefa</li>
+            <li>1asdfasef</li>
+            <li>1adsfa</li>
+            <li>1asdfa</li>
+        </ul>
+        <ul class="list-unstyled product-item-list" style="float: right">
+            <li class="table-bordered" ng-repeat="car in carList">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-sm-12">
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img ng-src="{{car.img}}" alt="" width="300px">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">
+                                        <b>{{car.name}}</b>&nbsp;&nbsp;&nbsp;
+                                        <span style="font-size:16px;">{{car.price}}元/天</span>
+                                    </h3>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            &nbsp;
+                                        </tr>
+                                        <tr>
+                                            <!--<td>级别：标配型</td>-->
+                                            <td>品牌：{{car.brand}}</td>
+                                            <!--<td>车身颜色：红色</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>发动机：{{config.engine[car.engine]}}</td>
+                                            <td>变速箱：{{config.gearbox[car.gearbox]}}</td>
+                                            <td>车身结构：{{config.zone[car.zone]}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>座位数：{{config.seat[car.seat]}}</td>
+                                            <td>能源：{{config.energy[car.energy]}}</td>
+                                            <td>驱动方式：{{config.driveMode[car.driveMode]}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-md-offset-1 col-sm-12">
+                            <button class="btn btn-success btn-block" style="margin-top:70px;" type="button" data-cid="{{car.cid}}"  data-toggle="modal" data-target="#myModal">订购</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h3 class="modal-title">用户登录</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>车名</label>
+                        <input type="text"  class="form-control" id="cname"  value='{{carInfo.name}}' disabled/>
+                        <input type="text" value="{{carInfo.cid}}" disabled hidden id="cid">
+                    </div>
+                    <div class="form-group">
+                        <label>租车人账户</label>
+                        <input class="form-control" value="{{loginName}}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>联系电话:</label>
+                        <input class="form-control" ng-model="order.tel"/>
+                    </div>
+                    <div class="form-group">
+                        <label>租期:</label>
+                        <input class="form-control" ng-model="order.days" type="number"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span>总计：{{total}}</span>
+                    <a href="#" class="btn btn-success" ng-click="orderSubmit()">确认租车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'tpl/footer.html'"></div>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <style>
+        #menu a.navbar-text{
+            color:#fff;
+        }
+        body{
+            margin-top: 50px;
+        }
+        .carousel-inner img{
+            margin: 0 auto;
+        }
+        #renting-btn{
+            margin-top:6%;
+        }
+        @media (min-width: 768px){
+            #carousel-intro{
+                position: absolute;
+                top: 28%;
+                left:5%;
+                width:35%;
+            }
+        }
+        @media (max-width: 768px){
+            #carousel-intro h1,#carousel-intro p{
+                display: none;
+            }
+            #carousel-intro{
+                position: absolute;
+                top: 28%;
+                left:5%;
+                width:40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand">
+                <span class="logo">
+                    sec2nd
+                </span>
+                    </a>
+                    <a href="#menu" class="navbar-toggle" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="menu">
+                    <div class="nav navbar-nav navbar-right">
+                        <a href="#" class="navbar-text navbar-right btn btn-xs btn-success" data-toggle="modal" data-target="#login-modal">登录</a>
+                        <span class="navbar-text navbar-right">|</span>
+                        <a href="regin.html" class="navbar-text navbar-right btn btn-xs btn-success">注册</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right list-inline">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#">租车</a></li>
+                        <li><a href="#">订单</a></li>
+                        <li><a href="#">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--轮播-->
+    <div class="carousel slide" data-ride="carousel" id="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/banner_01.jpg" alt=""/>
+            </div>
+            <div class="item">
+                <img src="img/banner_02.jpg" alt=""/>
+            </div>
+            <div class="item">
+                <img src="img/banner_03.jpg" alt=""/>
+            </div>
+            <div class="item">
+                <img src="img/banner_04.jpg" alt=""/>
+            </div>
+        </div>
+        <div id="carousel-intro">
+            <h1>老司机租车</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut autem consequatur, culpa dicta error, fuga hic iure laboriosam modi nemo nesciunt odit omnis qui quos, saepe voluptatem voluptates!</p>
+            <a href="#" class="btn btn-primary btn-md" id="renting-btn">加入老司机</a>
+        </div>
+    </div>
+
+    <!--摸态框-->
+    <div class="modal fade" id="login-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h3 class="modal-title">用户登录</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="uname">用户名</label>
+                        <input type="text" class="form-control" id="uname" name="uname"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="upwd">密码</label>
+                        <input type="password" id="upwd" class="form-control" name="upwd"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-success btn-sm">登录</a>
+                    <a href="#" class="btn btn-danger btn-sm">立即注册</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    javascript:(function () {
+        var s = document.createElement("script");
+        s.onload = function () {
+            bootlint.showLintReportForCurrentDocument([]);
+        };
+        s.src = "js/bootlint.js";
+        document.body.appendChild(s)
+    })();
+</script>
+</body>
+</html>

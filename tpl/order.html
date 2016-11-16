@@ -1,0 +1,28 @@
+<div ng-include="'tpl/header.html'"></div>
+<div class="container" style="min-height: 600px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>订单编号</th>
+                <th>车辆信息</th>
+                <th>租车人账号</th>
+                <th>下单时间</th>
+                <th>租期</th>
+                <th>联系电话</th>
+                <th>订单状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="order in orderList">
+                <td>{{order.oname}}</td>
+                <td>{{order.cname}}</td>
+                <td>{{order.uname}}</td>
+                <td>{{order.orderTime}}</td>
+                <td>{{order.days}}</td>
+                <td>{{order.tel}}</td>
+                <td>{{status[order.status]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div ng-include="'tpl/footer.html'"></div>

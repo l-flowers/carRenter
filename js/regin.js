@@ -1,0 +1,25 @@
+$("#uname").blur(function(){
+    if($(this).val().length<6){
+        $(this).next().show();
+    }else{
+        $(this).next().hide();
+    }
+});
+$("#upwd").blur(function(){
+    if($(this).val().length<6){
+        $(this).next().show();
+    }else{
+        $(this).next().hide();
+    }
+});
+$("#cpwd").blur(function(){
+    if($(this).val()!=$(this).parent().prev().find('input').val()){
+        $(this).next().show();
+    }else{
+        $(this).next().hide();
+    }
+});
+$("#loginBtn").click(function(){
+    console.log(1);
+})
+console.log(1);

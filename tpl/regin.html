@@ -1,0 +1,25 @@
+<div class="container-fluid reg-page">
+    <h1>用户注册页面</h1>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" id="regPage">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="uname">用户名：</label>
+                    <input type="text" name="uname" id="uname" class="form-control" ng-blur="nameInfo()" ng-model="user.name"/>
+                    <span>用户名长度不能低于6</span>
+                </div>
+                <div class="form-group">
+                    <label for="upwd">输入密码：</label>
+                    <input type="password" name="upwd" id="upwd" class="form-control"  ng-blur="pwInfo()" ng-model="user.pwd"/>
+                    <span>密码长度不能低于6位</span>
+                </div>
+                <div class="form-group">
+                    <label for="cpwd">确认密码：</label>
+                    <input type="password" name="cpwd" id="cpwd" class="form-control"  ng-blur="cpwInfo()"/>
+                    <span>两次输入密码必须一致</span>
+                </div>
+            </form>
+            <a href="" class="btn btn-primary btn-md center-block" id="loginBtn" ng-click="regSubmit()">注册</a>
+        </div>
+    </div>
+</div>
